@@ -25,11 +25,11 @@ docker run \
 --privileged \
 --rm \
 --volume="${project_directory}:/app" \
---device="/dev/tty.SLAB_USBtoUART:/dev/tty.USB0" \
+--device="/dev/ttyUSB0:/dev/ttyUSB0" \
 --workdir="/app/tools/development/helpers" \
 "${image_name}:${image_version}"
 
-# --device="/dev/ttyUSB0:/dev/ttyUSB0" \
+--device="/dev/tty.SLAB_USBtoUART:/dev/tty.USB0" \
 
 popd > /dev/null
 
